@@ -59,7 +59,7 @@ Ensure you have the following installed on your machine:
 4.  **Setup the Frontend:**
     Navigate to the `frontend` directory and follow the instructions in its `README.md` file.
     ```bash
-    cd ../frontend
+    cd frontend
     ```
     *(See `frontend/README.md` for detailed steps)*
 
