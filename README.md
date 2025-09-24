@@ -65,29 +65,54 @@ Ensure you have the following installed on your machine:
 
 ---
 
-## 📂 Project Structure
+# 🏛️ Project Architecture
 
-/
-├── frontend/         # Contains the React Frontend Application
-│   ├── public/
-│   ├── src/
-│   └── README.md   # Frontend specific README
-│
-├── backend/         # Contains the Node.js/Express Backend API
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── seeds/
-│   ├── lib/
-│   └── README.md   # Backend specific README
-│
-├── .gitignore      # Specifies untracked files Git should ignore
-├── package.json    # Root package for build/start scripts
-└── README.md       # This file (Main project README)
+This document provides a detailed overview of the project structure and the purpose of each directory.
 
 ---
+
+## ## Root Directory
+
+The root directory contains the two main parts of the application: the `frontend` and the `backend`. It also holds configuration files that are essential for the entire project.
+
+/
+├── frontend/         # React Frontend Application
+├── backend/          # Node.js/Express Backend API
+├── .gitignore        # Files and folders to be ignored by Git
+├── package.json      # Root scripts for building and starting the project
+└── README.md         # Main project overview
+
+---
+
+## ## Frontend (`/frontend`)
+
+The frontend is a modern React application built with Vite. It's responsible for all user interface elements and client-side logic.
+
+frontend/
+├── public/           # Static assets (icons, images)
+├── src/              # Main source code
+│   ├── components/   # Reusable React components (e.g., Sidebar, MessageInput)
+│   ├── lib/          # Helper libraries (e.g., configured Axios instance)
+│   ├── pages/        # Page components (e.g., HomePage, LoginPage)
+│   └── store/        # Zustand state management stores (e.g., authStore, chatStore)
+├── .env              # Environment variables (e.g., VITE_BASE_URL)
+└── README.md         # Instructions specific to the frontend
+
+---
+
+## ## Backend (`/backend`)
+
+The backend is a Node.js server using the Express framework. It handles the REST API, manages the database connection, and powers real-time communication with Socket.io.
+
+backend/
+├── controllers/      # Business logic for routes
+├── middleware/       # Express middleware (e.g., authentication check)
+├── models/           # Mongoose schemas for the database
+├── routes/           # API route definitions
+├── lib/              # Socket.io configuration and helper functions
+├── seeds/            # Scripts to populate the database with initial data
+├── .env              # Server-side environment variables and secrets
+└── README.md         # Instructions specific to the backend
 
 ## 🤝 Contributing
 
